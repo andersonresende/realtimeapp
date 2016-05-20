@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="realTimeApp">
+<head lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    {% block scripts %}
+    <!-- Angular JS -->
+    <script type="text/javascript"
+            src="{{url_for('static', filename='bower_components/angular/angular.min.js')}}">
+    </script>
+
+    <!-- Pusher JS -->
+     <script type="text/javascript"
+            src="{{url_for('static', filename='bower_components/pusher/dist/pusher.min.js')}}">
+    </script>
+
+    <!-- Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+
+    <!-- Ng Map Angular -->
+    <script type="text/javascript"
+            src="{{url_for('static', filename='bower_components/ngmap/build/scripts/ng-map.min.js')}}">
+    </script>
+
+    <!-- Angular Facebook -->
+    <script type="text/javascript"
+            src="{{url_for('static', filename='bower_components/angular-facebook/lib/angular-facebook.js')}}">
+    </script>
+
+    <!-- App Angular -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/services.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/controllers.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/app.js')}}"></script>
+
+    <!-- Jquery -->
+    <script type="text/javascript"
+          src="{{url_for('static', filename='bower_components/jquery/dist/jquery.min.js')}}">
+    </script>
+
+    <!-- Bootstrap Js -->
+    <script type="text/javascript"
+          src="{{url_for('static', filename='bower_components/bootstrap/dist/js/bootstrap.min.js')}}">
+    </script>
+
+    {% endblock %}
+
+    {% block styles %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css"
+          href="{{url_for('static', filename='bower_components/bootstrap/dist/css/bootstrap.css')}}">
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    {% endblock %}
+
+</head>
+<body data-ng-controller="MainController as control">
+
+{% block body %}
+
+{% block navbar %}{% endblock %}
+
+{% block content %} {% endblock %}
+
+{% endblock %}
+
+</body>
+</html>
